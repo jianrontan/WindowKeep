@@ -80,10 +80,6 @@ See the official [Tauri prerequisites](https://v2.tauri.app/start/prerequisites/
 
 We will pin the Rust toolchain and commit application dependency lockfiles when scaffolding. npm installs project dependencies locally, and Cargo resolves dependencies per project, so no Python-style virtual environment is needed. A clean Windows VM may later help test installers, but is not the primary development environment.
 
-## Learning Rust while building
-
-This project is also a guided introduction to Rust. Introduce concepts through small, reviewable features: structs and enums for snapshots, ownership and borrowing for data handling, `Option` and `Result` for missing data and failures, and traits/modules for platform boundaries. Explain compiler errors and design choices as they arise. Keep OS interop and any necessary `unsafe` code small, documented, and isolated.
-
 ## Contribution and commit conventions
 
 Use Conventional Commit subjects, for example `feat: add local workspace snapshots` or `docs: document development setup`. Larger commits include bullet points in the commit body explaining meaningful changes and verification. Do not add attribution text or co-author trailers. See [AGENTS.md](AGENTS.md) for repository working instructions.
