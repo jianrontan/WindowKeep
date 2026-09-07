@@ -15,3 +15,13 @@
 - Validate extension-window-to-native-window matching; never silently assign uncertain matches or close windows based on a guessed match.
 - Save durably before closing and handle changes during capture and partial failures explicitly.
 - Future sync is optional and uses the user's own cloud deployment. AWS is the first planned reference provider.
+
+## Coding conventions
+
+- TypeScript must use strict checking. Do not use explicit `any`, unsafe assertions to bypass validation, or suppression comments to conceal type errors.
+- Treat external input as `unknown` and validate it at runtime before use. Keep shared message contracts in `packages/protocol`.
+- Prefer discriminated unions, readonly data where practical, named exports, and type-only imports. Handle optional values and promise failures explicitly.
+- Keep UI, browser integration, persistence, and OS integration separate. Add dependencies only when a feature requires them.
+- Use ESLint's strict type-aware rules and Prettier. Run `npm run check`, `npm test`, and `npm run build` for TypeScript changes.
+- Use Cargo formatting and Clippy for Rust. Avoid `unwrap` and `expect` in application code; handle errors explicitly. Unsafe code is forbidden in the initial scaffold; any future OS interop exception requires a narrow, documented boundary.
+- Test behavior and failure boundaries rather than mirroring implementation. Never use real browsing data as committed fixtures.

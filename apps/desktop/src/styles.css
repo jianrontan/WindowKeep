@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  font-family: 'Segoe UI', sans-serif;
+  color: #18332e;
+  background: #f4f5ef;
+  font-synthesis: none;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 72px 32px;
+}
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.1;
+  max-width: 600px;
+}
+p {
+  line-height: 1.7;
+}
+section {
+  margin-top: 40px;
+  padding: 24px;
+  background: white;
+  border: 1px solid #d8dfd8;
+  border-radius: 12px;
+}
+h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #eef0e9;
+  font-size: 14px;
+}

@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "WindowKeep",
+  "version": "0.1.0",
+  "description": "Local browser workspace snapshots. Connection prototype in development.",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "WindowKeep — connection not implemented"
+  },
+  "incognito": "not_allowed"
+}

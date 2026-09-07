@@ -1,0 +1,35 @@
+{
+  "name": "windowkeep",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "npm run dev --workspace @windowkeep/desktop",
+    "dev:desktop": "npm run tauri --workspace @windowkeep/desktop -- dev",
+    "build:desktop": "npm run tauri --workspace @windowkeep/desktop -- build --no-bundle",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run typecheck && npm run lint && npm run format:check",
+    "test": "vitest run",
+    "check:rust": "cargo check --workspace",
+    "lint:rust": "cargo clippy --workspace --all-targets -- -D warnings"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.10.0",
+    "prettier": "^3.0.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^3.2.0"
+  }
+}
